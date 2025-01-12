@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Go Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            background-color: #f7fafc;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .nav-container {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2d3748;
+            text-decoration: none;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: #4299e1;
+            color: white;
+            border: 1px solid #4299e1;
+        }
+
+        .btn-primary:hover {
+            background-color: #3182ce;
+            border-color: #3182ce;
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: #4299e1;
+            border: 1px solid #4299e1;
+        }
+
+        .btn-secondary:hover {
+            background-color: #ebf8ff;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card {
+            padding: 1.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-content">
+            <a href="index.html" class="nav-brand">Go Application</a>
+            <div>
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card fade-in text-center">
+            <h1 style="font-size: 2.5rem; color: #2d3748; margin-bottom: 1.5rem;">
+                Welcome to Go Application
+            </h1>
+            <p style="color: #4a5568; margin-bottom: 2rem; font-size: 1.1rem;">
+                Experience secure authentication and modern web development with Go
+            </p>
+            
+            <div class="grid grid-cols-2">
+                <div class="card feature-card">
+                    <h2 style="color: #2b6cb0; margin-bottom: 1rem;">Secure Authentication</h2>
+                    <p style="color: #4a5568;">
+                        Built with industry-standard security practices using JWT tokens
+                        and secure password hashing.
+                    </p>
+                </div>
+                
+                <div class="card feature-card">
+                    <h2 style="color: #2b6cb0; margin-bottom: 1rem;">Modern Stack</h2>
+                    <p style="color: #4a5568;">
+                        Using Go Fiber framework with MongoDB for a fast and scalable
+                        backend solution.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <a href="register.html" class="btn btn-primary">Get Started</a>
+                <a href="login.html" class="btn btn-secondary" style="margin-left: 1rem;">Sign In</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
