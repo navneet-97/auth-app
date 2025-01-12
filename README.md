@@ -9,4 +9,4 @@ This is a simple web application using the Go Fiber framework. The application a
 - Validate and handle errors (e.g., incorrect credentials, missing fields).
 
 To run the Application
-- run commands : go run main.go and python -m http.server 8080
+- run command in terminal : go run main.go
